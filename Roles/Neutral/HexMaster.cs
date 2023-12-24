@@ -59,8 +59,6 @@ public static class HexMaster
         if (!AmongUsClient.Instance.AmHost) return;
         if (!Main.ResetCamPlayerList.Contains(playerId))
             Main.ResetCamPlayerList.Add(playerId);
-
-
     }
     public static bool IsEnable => playerIdList.Count > 0;
     private static void SendRPC(bool doHex, byte hexId, byte target = 255)

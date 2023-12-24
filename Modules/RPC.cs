@@ -15,7 +15,7 @@ using static TOHE.Translator;
 
 namespace TOHE;
 
-enum CustomRPC
+public enum CustomRPC
 {
     VersionCheck = 60,
     RequestRetryVersionCheck = 61,

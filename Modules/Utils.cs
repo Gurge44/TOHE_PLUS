@@ -1922,6 +1922,7 @@ public static class Utils
         }
         return playerRooms.Any() ? playerRooms : null;
     }
+    public static MessageWriter SetupCustomRoleRPC(CustomRPC RPC) => AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)RPC, SendOption.Reliable, -1);
     public static PlayerControl GetPlayerById(int PlayerId) => Main.AllPlayerControls.FirstOrDefault(pc => pc.PlayerId == PlayerId);
     public static GameData.PlayerInfo GetPlayerInfoById(int PlayerId) => GameData.Instance.AllPlayers.ToArray().FirstOrDefault(info => info.PlayerId == PlayerId);
 
